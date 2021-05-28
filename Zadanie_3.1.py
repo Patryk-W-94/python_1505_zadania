@@ -60,3 +60,10 @@ def bmi(masa:int, wzrost:int):
 
 def bmi_tes():
     assert bmi(79,179) == 24.65590961580475
+
+def pole_trojkata(a:float, b:float, c:float):
+    if isinstance(a,float) and isinstance(b,float) and isinstance(c, float):
+        p = (a+b+c)/2
+        return math.sqrt(p * (p - a) * (p - b) * (p - c))
+def pole_trojkata_test():
+    assert(pole_trojkata(2.0,3.5,4.5)) == 3.3541019662496847
