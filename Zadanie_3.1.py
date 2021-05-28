@@ -65,5 +65,45 @@ def pole_trojkata(a:float, b:float, c:float):
     if isinstance(a,float) and isinstance(b,float) and isinstance(c, float):
         p = (a+b+c)/2
         return math.sqrt(p * (p - a) * (p - b) * (p - c))
+    else:
+        return print("Podano zla wartosc")
+
 def pole_trojkata_test():
     assert(pole_trojkata(2.0,3.5,4.5)) == 3.3541019662496847
+
+
+def ile_mil(kilometry:float):
+    if isinstance(kilometry, float):
+        return kilometry * 0.62
+    else:
+        return print("Podana bledna wartosc")
+
+def ile_mil_test():
+    assert ile_mil(100) == 62
+
+
+def ile_kilometrow(mile: float):
+    if isinstance(mile, float):
+        return mile * 1.6
+    else:
+        return print("Podana bledna wartosc")
+
+
+def ile_kilometrow_test():
+    assert ile_kilometrow(100) == 160
+
+print("""Kalkulator mile - kilometry. Wybierz co chcesz przeliczyc:
+      mile na kilometry: wpisz 1
+      kilometry na mile: wpisz 2""")
+co_liczyc = int(input("Twoj wybor to: "))
+
+if co_liczyc == 1:
+    print("Podaj liczbe mil stosujac liczbe zmiennoprzecinkowa, np: 10.0 lub 12.45")
+    mile = float(input("Ilosc mil: "))
+    print("Podana wartosc w milach to ", ile_kilometrow(mile), "kilometrow.")
+elif co_liczyc == 2:
+    print("Podaj liczbe mil stosujac liczbe zmiennoprzecinkowa, np: 10.0 lub 12.45")
+    kilometry = float(input("Ilosc kilometrow: "))
+    print("Podana wartosc w kilometrach to ", ile_mil(kilometry), "mil.")
+else:
+    print("Podano bledna wartosc!")
