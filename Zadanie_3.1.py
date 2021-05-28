@@ -52,3 +52,11 @@ def pole_kola(promien:int):
 
 def pole_kola_test():
     assert pole_kola(6) == 113.09733552923255
+
+
+def bmi(masa:int, wzrost:int):
+    if isinstance(masa,int) and isinstance(wzrost, int):
+        return masa / ((wzrost/100) ** 2)
+
+def bmi_tes():
+    assert bmi(79,179) == 24.65590961580475
