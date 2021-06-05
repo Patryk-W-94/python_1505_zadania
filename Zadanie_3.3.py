@@ -16,6 +16,7 @@ wynik = suma(lista_liczb)
 - `wypisz_podzielne(liczby, x)` – wypisuje (`print`) wszystkie te liczby z listy `liczby`, które są podzielne przez `x`
 - `pierwsza_podzielna(liczby, x)` – zwraca (`return`) pierwszą znalezioną w `liczby` liczbę podzielną przez `x`; zwraca `None`, jeśli takiej liczby tam nie ma
 - `znajdz_wspolny(liczby1, liczby2)` – zwraca element (liczbę), który występuje zarówno w liście `liczby1`, jak i `liczby2`; zwraca `None`, jeśli takiego elementu nie ma'''
+import pytest
 liczbyy = [2, 4, 6,10, 50.25, 37.12,[30,50], 8, "radom"]
 def suma(liczby:list):
     suma2 = 0
@@ -167,4 +168,4 @@ def znajdz_wspolny(lista1, lista2):
 def znajdz_wspolny_test():
     assert znajdz_wspolny([2,4,5,5.5,"fresh"],[5.5, 17.25,2,"komputer"]) == [2, 5.5]
 
-print(znajdz_wspolny([2,4],[5,6]))
+    print(znajdz_wspolny([2,4],[5,6]))
